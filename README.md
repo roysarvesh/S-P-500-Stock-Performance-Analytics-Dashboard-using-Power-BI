@@ -1,36 +1,85 @@
 S&P 500 Stock Performance Analytics Dashboard
-A Comprehensive 5-Year Financial Analysis in Power BI
-📊 Project Overview
-This project provides an interactive analysis of historical stock data for all companies currently in the S&P 500 index. Using a dataset of over 600,000 rows, the dashboard allows users to deep-dive into individual stock trends, compare sector-wide performance, and analyze trading volumes from 2013 to 2018.
+A Comprehensive 5-Year Financial Analysis in Power BI 📊
+4
+📌 Project Overview
+
+This project presents an interactive and fully dynamic Power BI dashboard built to analyze 5 years of historical stock performance for all companies currently listed in the S&P 500.
+
+Using a dataset of 600,000+ rows, the report enables detailed exploration of price trends, ROI growth, sector-wide insights, and trading volume analysis from 2013 to 2018.
+
+Author: Sarvesh Kumar Roy
+Repository: https://github.com/roysarvesh/S-P-500-Stock-Performance-Analytics-Dashboard-using-Power-BI
 
 🛠️ Tools & Technologies
-Power BI Desktop: Data Visualization & Dashboarding.
 
-Power Query (M): Data transformation, cleaning, and null handling.
+Power BI Desktop – Dashboard creation
 
-DAX: Advanced measures for ROI calculation and time-intelligence.
+Power Query (M) – Data cleaning & transformations
 
-Dataset: Historical stock data (CSV format) including Open, High, Low, Close, and Volume.
+DAX – Advanced ROI and time-intelligence measures
+
+Dataset – Historical OHLC + Volume (CSV)
 
 💡 Key Features
-Individual Stock Deep-Dive: Real-time filtering for 505 unique tickers with automated "Latest Price" and "Total ROI %" cards.
+1. Individual Stock Deep-Dive
 
-Interactive Tooltips: Custom report-page tooltips that display the daily High vs. Low price range when hovering over the price line.
+Real-time filtering for 505 unique tickers
 
-Market Comparison: A secondary analysis page for benchmarking multiple stocks against each other using multi-legend line charts.
+KPI cards showing:
 
-Trading Volume Analysis: Heatmaps and bar charts to identify market liquidity and "hype" periods.
+Latest Price
+
+Total ROI %
+
+52-Week High / Low
+
+Line charts for daily price trends
+
+2. Interactive Tooltips
+
+Custom tooltip page showing daily High vs Low range
+
+Auto-displayed on hover for improved user experience
+
+3. Market Comparison View
+
+Multi-line trend comparison across any selected companies
+
+Ideal for sector benchmarking and cross-analysis
+
+4. Trading Volume Analysis
+
+Heatmaps to detect high-activity periods
+
+Monthly/Yearly volume patterns
+
+Identify hype cycles and market sentiment shifts
 
 📈 DAX Measures Used
-Latest Price: CALCULATE(SUM('Fact_Stocks'[Close ($)]), LASTDATE('Fact_Stocks'[Date]))
+Latest Price
+Latest Price :=
+CALCULATE(
+    SUM('Fact_Stocks'[Close ($)]),
+    LASTDATE('Fact_Stocks'[Date])
+)
 
-Total ROI %: Calculates percentage growth from the stock's first appearance in the dataset to the latest date.
+Total ROI %
 
-52-Week High/Low: Dynamic measures that track the peak and trough within a rolling 365-day window.
+Percentage growth from the stock’s first recorded date to the latest date.
+
+52-Week High / Low
+
+Rolling window calculations for the past 365 days.
 
 🚀 How to Use
-Clone this repository.
+
+Clone the repository:
+https://github.com/roysarvesh/S-P-500-Stock-Performance-Analytics-Dashboard-using-Power-BI
 
 Open the .pbix file using Power BI Desktop.
 
-If the data source is broken, update the file path in Transform Data > Data Source Settings to point to the all_stocks_5yr.csv included in the repo.
+If the data source path breaks:
+
+Go to Transform Data → Data Source Settings → Change Source
+
+Update the path to all_stocks_5yr.csv included in the repo.
