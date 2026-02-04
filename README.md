@@ -1,6 +1,8 @@
 S&P 500 Stock Performance Analytics Dashboard
 A Comprehensive 5-Year Financial Analysis in Power BI 📊
-/n
+
+
+
 📌 Project Overview
 
 This project presents an interactive and fully dynamic Power BI dashboard built to analyze 5 years of historical stock performance for all companies currently listed in the S&P 500.
